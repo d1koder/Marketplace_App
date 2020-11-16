@@ -2,7 +2,7 @@
 
 <section class="section">
     <div class="container">
-        <%# <h1 class="title">
+        <%# < class="title">
             <%= @post.title%>
         <nav class="level">
 
@@ -22,13 +22,13 @@
           </p>
           <p class="level-item">
         
-            <!-- TODO: add rails functionality -->
-            <a class="button is-danger">Delete</a>
+            <%= link_to "Delete", post_path(@post), method: :delete, data: ( confirm: "are you sure? " ), class: "button is-danger" %>
+            
           </p>
         </div>
         </nav>
 <hr />
-        </h1>
+    
         <div class="content">
         <%= @post.content %>
 
@@ -37,3 +37,5 @@
     </section>
 
     <section class="comments"></section>
+    
+

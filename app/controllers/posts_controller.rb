@@ -37,6 +37,13 @@ end
         @post = Post.find(params[:id])
     end
 
+    def destroy
+        @post = Post.find(params[:id])
+        @post.destory 
+
+        redirect_to_posts_path
+    end
+
 
     private
 
